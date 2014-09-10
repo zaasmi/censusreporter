@@ -12,7 +12,7 @@ Census Reporter provides easy to understand facts about any place in America. Yo
         <section class="column-full clearfix big-action">
             <h1 class="article-header">Profile</h1>
             <div id="geography-select-wrapper" class="input-wrapper">
-                <input name="geography_select" id="geography-select" type="text" placeholder="Start typing to pick a place..." autocomplete="off">
+                <input name="geography_select" id="geography-select" type="text" placeholder="Enter an address or other place..." autocomplete="off">
                 <div class="geolocate-only">
                     <span class="or">or</span>
                     <a href="{% url 'locate' %}" class="action-button"><i class="fa fa-location-arrow"></i> <span class="wide-only">Find places based on</span><span class="narrow-only">Use</span> your current location</a>
@@ -145,7 +145,7 @@ if (Modernizr.geolocation) {
     $('.geolocate-only').show();
 }
 // geoSelect already defined by widget.geo.select.js
-geoSelect.focus()
+$("#geography-select").focus()
 </script>
 <script src="{{ STATIC_URL }}js/data.query.builder.js"></script>
 {% endblock %}
